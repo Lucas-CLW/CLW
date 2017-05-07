@@ -1,0 +1,18 @@
+/* 外觀模式，網頁皮膚 */
+body {
+  text-align: center;
+}
+
+hi {
+  font-family: Arial;
+}
+button {
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  font-family: Arial black;
+  color: black;
+  background: #00AAAA;
+  border: none;
+  border-radius: 5px;
+}
