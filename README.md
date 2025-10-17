@@ -17,3 +17,11 @@ This repository contains the assets for an interactive résumé experience locat
 
 - 所有樣式、互動與素材皆位於 `JS Lesson 1/` 目錄底下，包含 `index.html`、`css/style.css` 以及 `js/index.js`。
 - 如需調整內容，可直接修改對應檔案並重新整理瀏覽器驗證結果。
+- 如果你還沒有這些檔案，可照以下方式準備：
+  1. 在電腦上建立一個資料夾，名稱可以叫做 `my-interactive-resume`。
+  2. 在這個資料夾裡再建立一個子資料夾 `JS Lesson 1`，把所有網站檔案都放在這裡。
+  3. 進入 `JS Lesson 1` 後，新增三個部分：
+     - `index.html`：主要的網頁檔，直接複製這個專案提供的內容貼進去即可。
+     - `css` 資料夾：裡面放 `style.css`，負責顏色、字型、排版等外觀設定。
+     - `js` 資料夾：裡面放 `index.js`，掌管按鈕、動畫等互動效果。
+  4. 只要保持這個結構，瀏覽器或本機伺服器就能正確載入每個檔案，網站也會正常運作。
