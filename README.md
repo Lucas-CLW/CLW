@@ -25,3 +25,18 @@ This repository contains the assets for an interactive résumé experience locat
      - `css` 資料夾：裡面放 `style.css`，負責顏色、字型、排版等外觀設定。
      - `js` 資料夾：裡面放 `index.js`，掌管按鈕、動畫等互動效果。
   4. 只要保持這個結構，瀏覽器或本機伺服器就能正確載入每個檔案，網站也會正常運作。
+
+## 不用指令，直接在 GitHub 網站上傳檔案
+
+1. **登入 GitHub**：打開 [github.com](https://github.com) 並登入你的帳號。
+2. **建立新儲存庫**：右上角按「＋」→ **New repository**，輸入儲存庫名稱（例如 `my-interactive-resume`），其他選項先保持預設，按 **Create repository**。
+3. **開啟上傳畫面**：進到剛建立好的儲存庫頁面，點綠色的 **<> Code** 按鈕旁邊的 **Add file** → **Upload files**。
+4. **拖拉檔案上傳**：
+   - 在電腦檔案總管把整個 `JS Lesson 1` 資料夾打開，選取裡面的所有東西（`index.html`、`css/`、`js/` 以及其他需要的檔案）。
+   - 直接拖拉到瀏覽器的「Drag files here」區塊，或是按 **choose your files** 手動挑選。GitHub 會幫你保留 `css`、`js` 資料夾結構。
+5. **確認檔案清單**：檢查畫面上出現的檔案名稱與資料夾是否完整無誤。
+6. **寫上提交訊息**：往下滑到 **Commit changes**，在「Commit message」欄位輸入一句話，例如「upload interactive resume」。
+7. **完成上傳**：按下下面的 **Commit changes** 按鈕。GitHub 會把剛剛拖進來的所有檔案一次上傳並建立版本紀錄。
+8. **檢查結果**：上傳完成後，回到儲存庫首頁就能看到 `JS Lesson 1/` 資料夾與裡面的檔案。如果要調整內容，重複步驟 3～7 再上傳一次更新過的檔案即可。
+
+> 小提醒：如果拖拉資料夾時沒有成功，可先在電腦上把 `JS Lesson 1` 壓縮成 ZIP，再在 **Upload files** 頁面右上角按 **choose your files** 選擇那個 ZIP 檔上傳。GitHub 會自動解壓並還原資料夾層級。
