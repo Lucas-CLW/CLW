@@ -1,32 +1,227 @@
 <!DOCTYPE html>
-<html >
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>Java Script Lesson 1</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
-
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Interactive Résumé</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <!-- 內容架構，網頁骨架 -->
-<html>
+  <div class="app-shell">
+    <header class="hero" id="home">
+      <nav class="primary-nav" aria-label="主要導覽">
+        <a class="brand" href="#home">My Interactive Résumé</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+          <span class="sr-only">切換選單</span>
+        </button>
+        <ul class="nav-list" id="primary-menu">
+          <li><a href="#home" data-nav-link>首頁</a></li>
+          <li><a href="#experience" data-nav-link>經歷</a></li>
+          <li><a href="#skills" data-nav-link>技能</a></li>
+          <li><a href="#projects" data-nav-link>作品</a></li>
+          <li><a href="#contact" data-nav-link>聯絡</a></li>
+        </ul>
+      </nav>
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Hello! 我是</p>
+          <h1 class="hero__title">陳小雅 — 使用者體驗設計師</h1>
+          <p class="hero__lead">
+            熱愛把抽象的需求轉化為令人驚喜的互動體驗，擅長結合商業策略、設計思維與前端原型實作，打造令人印象深刻的產品旅程。
+          </p>
+          <div class="hero__actions">
+            <button class="btn btn--primary" id="explore-btn">開始互動導覽</button>
+            <a class="btn btn--ghost" href="#contact">取得聯繫</a>
+          </div>
+          <dl class="hero__stats">
+            <div>
+              <dt>8+</dt>
+              <dd>年專業經驗</dd>
+            </div>
+            <div>
+              <dt>35%</dt>
+              <dd>提高專案轉換率</dd>
+            </div>
+            <div>
+              <dt>4.7★</dt>
+              <dd>使用者滿意度</dd>
+            </div>
+          </dl>
+        </div>
+        <aside class="hero__sidebar" aria-label="互動摘要">
+          <div class="story-card" data-story="value">
+            <h2>驅動價值</h2>
+            <p>策略、故事與數據驅動的設計流程，讓每個決策都能被量化驗證。</p>
+          </div>
+          <div class="story-card" data-story="mindset">
+            <h2>協作心法</h2>
+            <p>跨部門對齊願景、快速迭代，以工作坊形式打造共享語言。</p>
+          </div>
+          <div class="story-card" data-story="culture">
+            <h2>創新文化</h2>
+            <p>導入 Design Ops，建立長期可維護的設計系統與知識庫。</p>
+          </div>
+        </aside>
+      </div>
+    </header>
 
-<head>
-  <title>Hello World</title>
-</head>
+    <main>
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="section__header">
+          <h2 class="section__title" id="experience-title">工作經歷時間軸</h2>
+          <p class="section__lead">點選節點即可展開細節，模擬企業官網的互動敘事體驗。</p>
+        </div>
+        <div class="timeline" role="list">
+          <button class="timeline__item is-active" role="listitem" data-target="role-1">
+            <span class="timeline__year">2022 - 迄今</span>
+            <span class="timeline__role">資深 UX Lead · FlowLab</span>
+          </button>
+          <button class="timeline__item" role="listitem" data-target="role-2">
+            <span class="timeline__year">2018 - 2022</span>
+            <span class="timeline__role">產品設計師 · NovaTech</span>
+          </button>
+          <button class="timeline__item" role="listitem" data-target="role-3">
+            <span class="timeline__year">2015 - 2018</span>
+            <span class="timeline__role">互動設計師 · Amber Studio</span>
+          </button>
+        </div>
+        <div class="experience-panels">
+          <article class="experience-panel is-active" id="role-1" tabindex="0" aria-live="polite">
+            <h3>FlowLab · 資深 UX Lead</h3>
+            <ul>
+              <li>打造跨平台訂閱體驗，使用戶留存率提升 23%。</li>
+              <li>領導 8 人設計團隊建立設計系統與使用者研究流程。</li>
+              <li>結合 A/B 測試與可用性研究，縮短需求驗證週期 40%。</li>
+            </ul>
+          </article>
+          <article class="experience-panel" id="role-2" tabindex="0">
+            <h3>NovaTech · 產品設計師</h3>
+            <ul>
+              <li>協作 PM 與工程端開發企業資料儀表板，優化決策效率。</li>
+              <li>導入旅程地圖與工作坊，聚焦關鍵客戶需求。</li>
+              <li>整合品牌與數位設計語彙，建立一致的多平台體驗。</li>
+            </ul>
+          </article>
+          <article class="experience-panel" id="role-3" tabindex="0">
+            <h3>Amber Studio · 互動設計師</h3>
+            <ul>
+              <li>與行銷團隊合作打造沉浸式活動網站，提升停留時間 60%。</li>
+              <li>嘗試 WebGL 與動態介面實驗，建立創新提案範例庫。</li>
+              <li>建立設計指南，協助新成員快速上手專案工作流程。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-  <body>
-    <h1>Good Morning</h1>
-    <button id="start-btn">Hello</button>
-  </body>
+      <section class="section section--alt" id="skills" aria-labelledby="skills-title">
+        <div class="section__header">
+          <h2 class="section__title" id="skills-title">技能矩陣</h2>
+          <p class="section__lead">切換想瞭解的領域，立即呈現對應的能力指標。</p>
+        </div>
+        <div class="skill-filters" role="tablist" aria-label="技能分類">
+          <button class="chip is-active" role="tab" aria-selected="true" data-skill-filter="ux">體驗策略</button>
+          <button class="chip" role="tab" aria-selected="false" data-skill-filter="ui">介面設計</button>
+          <button class="chip" role="tab" aria-selected="false" data-skill-filter="tech">前端原型</button>
+          <button class="chip" role="tab" aria-selected="false" data-skill-filter="ops">設計營運</button>
+        </div>
+        <div class="skills-grid" aria-live="polite"></div>
+      </section>
 
-</html>
-  
-    <script src="js/index.js"></script>
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section__header">
+          <h2 class="section__title" id="projects-title">精選作品集</h2>
+          <p class="section__lead">滑動卡片了解專案亮點，可展開更多互動細節。</p>
+        </div>
+        <div class="project-carousel" role="region" aria-roledescription="carousel" aria-label="作品卡片">
+          <button class="carousel-control" data-direction="prev" aria-label="上一張">
+            <span aria-hidden="true">‹</span>
+          </button>
+          <div class="project-track">
+            <article class="project-card is-active" data-index="0">
+              <h3>FlowLab 訂閱體驗</h3>
+              <p>以使用者旅程為核心，重新定義訂閱流程與溝通節奏。</p>
+              <button class="link" data-project-detail aria-expanded="false">查看重點</button>
+              <ul class="project-detail" aria-hidden="true">
+                <li>導入分眾推播策略，轉換率提升 35%。</li>
+                <li>以 ProtoPie 原型驗證互動，縮短開發 2 週。</li>
+                <li>建立可複用元件庫，支援後續迭代。</li>
+              </ul>
+            </article>
+            <article class="project-card" data-index="1">
+              <h3>NovaTech 分析儀表板</h3>
+              <p>提供決策者即時洞察，打造資訊視覺化的單一真實來源。</p>
+              <button class="link" data-project-detail aria-expanded="false">查看重點</button>
+              <ul class="project-detail" aria-hidden="true">
+                <li>與資料科學家協作設計互動式圖表與 KPI 提醒。</li>
+                <li>使用 D3.js &amp; Web Components 建構模組化系統。</li>
+                <li>導入深色／淺色主題，提升可用性。</li>
+              </ul>
+            </article>
+            <article class="project-card" data-index="2">
+              <h3>Amber Studio 展演網站</h3>
+              <p>沉浸式互動敘事，讓品牌故事透過動態視覺與聲音呈現。</p>
+              <button class="link" data-project-detail aria-expanded="false">查看重點</button>
+              <ul class="project-detail" aria-hidden="true">
+                <li>結合 WebGL 與音樂互動，創造沉浸感。</li>
+                <li>針對行動裝置最佳化載入與觸控手勢。</li>
+                <li>社群分享互動流程，提升活動曝光。</li>
+              </ul>
+            </article>
+          </div>
+          <button class="carousel-control" data-direction="next" aria-label="下一張">
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+      </section>
 
+      <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+        <div class="section__header">
+          <h2 class="section__title" id="contact-title">聯絡我</h2>
+          <p class="section__lead">留下訊息，我將在 24 小時內回覆，或直接預約一段線上會議。</p>
+        </div>
+        <div class="contact-grid">
+          <form class="contact-form" aria-label="聯絡表單">
+            <div class="form-field">
+              <label for="name">姓名</label>
+              <input type="text" id="name" name="name" placeholder="請輸入您的姓名" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+            <div class="form-field">
+              <label for="message">訊息</label>
+              <textarea id="message" name="message" rows="4" placeholder="想聊的主題..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">送出訊息</button>
+            <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+          </form>
+          <aside class="contact-panel" aria-live="polite">
+            <h3>即時行事曆建議</h3>
+            <p class="contact-panel__lead">點擊按鈕，即可取得最快速的會議時段建議。</p>
+            <button class="btn btn--ghost" id="meeting-btn">推薦會議時段</button>
+            <p class="meeting-suggestion" id="meeting-suggestion" role="status" aria-live="polite"></p>
+            <ul class="contact-meta">
+              <li><strong>Email：</strong><a href="mailto:hello@myresume.tw">hello@myresume.tw</a></li>
+              <li><strong>LinkedIn：</strong><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">linkedin.com/in/myresume</a></li>
+              <li><strong>Based in：</strong>台北 · 接受遠端合作</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>© <span id="footer-year"></span> My Interactive Résumé. Inspired by dynamic storytelling experiences.</small>
+    </footer>
+  </div>
+
+  <script src="js/index.js"></script>
 </body>
 </html>
